@@ -20,3 +20,6 @@ const num: number = Direction["Up"];
 // We can use the enum values as both strings and numbers, as shown above. 
 // The string representation of the enum value can be obtained using the index signature,
 // while the numeric representation can be obtained using the enum name which is given inside the enum.
+
+console.log(str);
+console.log(num);
