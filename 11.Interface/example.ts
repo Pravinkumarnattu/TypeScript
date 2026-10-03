@@ -1,3 +1,4 @@
+export {}
 interface User {
   firstName: string;
   lastName: string;
@@ -24,9 +25,9 @@ const logUser = (user: User) => {
   );
 };
 
-const user1 = { firstName: "John", lastName: "Doe" };
+const user1 = { firstName: "John", lastName: "Doe", age: 20, gender: "male" }; // This object has additional properties (age and gender) that are not defined in the User interface, but it will still work because the required properties (firstName and lastName) are present.
 
-greetUser(user1); // This will work because user1 has the required properties for greetUser
+greetUser({ firstName: "John", lastName: "Doe", age: 20, gender: "male" }); // This will get an error because the object literal passed to the function has additional properties, while passing additional properties, we have use variable to store the object and then pass it to the function, it will work because the required properties are present in the object.
 logUser(user1);
 
 // To reduce redundancy, we can define an interface for the user object and use it in both functions.
